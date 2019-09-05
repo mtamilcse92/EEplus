@@ -1,48 +1,49 @@
 @import "variables";
 
 .onboard {
+  display: flex;
+  .onboard-lhs {
+    flex: 2;
     display: flex;
-    .onboard-lhs{
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: $spacing-xx-large;
-        background: $onboard-rhs-color;
-        header {
-            display: flex;
-            padding-bottom: $spacing-xx-large;
-            font-size: $font-size-title;
-            font-weight: $font-weight-bold;
-            color: $white-color;
-        }
-        section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            img {
-                padding: $spacing-small;
-                height: 50vh;
-            }
-            p {
-                display: flex;
-                padding: 0 $spacing-large;
-                text-align: center;
-                color: $white-color;
-            }
-        }
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: $spacing-xx-large;
+    background: $onboard-rhs-color;
+    header {
+      display: flex;
+      padding-bottom: $spacing-xx-large;
+      font-size: $font-size-title;
+      font-weight: $font-weight-bold;
+      color: $white-color;
     }
-    .onboard-rhs {
-        flex: 1;
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      img {
+        padding: $spacing-small;
+        height: $height_antenna;
+        margin: $spacing-xx-large;
+      }
+      p {
         display: flex;
-        flex-direction: column;
-        padding: $spacing-xx-large;
-        justify-content: flex-start;
-        header {
-            display: flex;
-            font-size: $font-size-title;
-            font-weight: $font-weight-bold;
-            color: $black-color;
-        }
+        padding: 0 $spacing-large;
+        text-align: center;
+        color: $white-color;
+      }
     }
+  }
+  .onboard-rhs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-xx-large;
+    justify-content: flex-start;
+    header {
+      display: flex;
+      font-size: $font-size-title;
+      font-weight: $font-weight-bold;
+      color: $black-color;
+    }
+  }
 }
