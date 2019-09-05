@@ -1,5 +1,3 @@
-@import "variables";
-
 .onboard {
   display: flex;
   .onboard-lhs {
@@ -11,6 +9,7 @@
     background: $onboard-rhs-color;
     header {
       display: flex;
+      font-family: $font-regular;
       padding-bottom: $spacing-xx-large;
       font-size: $font-size-title;
       font-weight: $font-weight-bold;
