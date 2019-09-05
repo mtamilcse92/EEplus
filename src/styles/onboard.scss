@@ -10,6 +10,7 @@
     header {
       display: flex;
       font-family: $font-regular;
+      letter-spacing: $spacing-xxx-small;
       padding-bottom: $spacing-xx-large;
       font-size: $font-size-title;
       font-weight: $font-weight-bold;
@@ -26,8 +27,9 @@
       }
       p {
         display: flex;
-        padding: 0 $spacing-large;
+        padding: 0 7rem;
         text-align: center;
+        font-weight: $font-weight-regular;
         color: $white-color;
       }
     }
@@ -38,8 +40,14 @@
     flex-direction: column;
     padding: $spacing-xx-large;
     justify-content: flex-start;
+    color: $black-x-color;
+    font-weight: $font-weight-regular;
+    .form-tip {
+      padding-top: $spacing-medium;
+    }
     header {
       display: flex;
+      letter-spacing: $spacing-xxx-small;
       font-size: $font-size-title;
       font-weight: $font-weight-bold;
       color: $black-color;

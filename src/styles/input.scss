@@ -3,8 +3,9 @@
 .text-input {
   display: flex;
   border: none;
+  border-radius: $border-radius-chip;
   background: #f0f6f6;
-  padding: $spacing-small;
+  padding: $spacing-medium;
   text-transform: capitalize;
 }
 
@@ -16,9 +17,12 @@
   font-size: $font-size-button;
   font-weight: $font-weight-bold;
   padding: $spacing-small;
-  border-radius: $border-radius-small;
+  border-radius: $border-radius-chip;
   background: #42bfdd;
   border: none;
   align-items: center;
-  font-size: 26px;
+  font-size: 1.3rem;
+  img {
+    width: 1.5vw;
+  }
 }
