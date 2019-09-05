@@ -1,0 +1,22 @@
+@import "variables";
+
+.text-input {
+    display: flex;
+    border: none;
+    background: #F0F6F6;
+    padding: $spacing-small;
+    text-transform: capitalize;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: $white-color;
+    font-size: $font-size-button;
+    font-weight: $font-weight-bold;
+    padding: $spacing-small;
+    border-radius: $border-radius-small;
+    background: #42BFDD;
+    border: none;
+}
