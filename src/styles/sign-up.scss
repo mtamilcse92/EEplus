@@ -1,0 +1,40 @@
+.terms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: $font-size-text-small;
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-large;
+  span {
+    display: flex;
+    padding-left: $spacing-xx-small;
+    a {
+      padding: 0 $spacing-xx-small;
+    }
+  }
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    color: $black-x-color;
+    padding-top: $spacing-small;
+    .user-name {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      .first-name {
+        padding-right: $spacing-small;
+      }
+      .first-name, .last-name {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .form-sub-head {
+      padding: $spacing-x-small 0;
+    }
+    .form-input {
+      margin-bottom: $spacing-xxx-small;
+    }
+  }

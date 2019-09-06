@@ -28,14 +28,7 @@
   flex-direction: row;
   align-items: center;
   padding-top: $spacing-large;
-  a {
-    color: #4577a2;
-    display: flex;
-    align-items: flex-end;
-    padding-left: $spacing-xx-small;
-    font-size: $font-size-text-small;
-    border-bottom: 1px solid #4577a2;
-  }
+  
   .forgot-password {
     flex: 1;
     display: flex;

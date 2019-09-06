@@ -5,7 +5,7 @@
   border: none;
   border-radius: $border-radius-chip;
   background: #f0f6f6;
-  padding: $spacing-medium;
+  padding: $spacing-small;
   text-transform: capitalize;
 }
 
@@ -25,4 +25,10 @@
   img {
     width: 1.5vw;
   }
+}
+
+.check-box {
+  border: none;
+  background: $white-color;
+  border: 1px solid red;
 }

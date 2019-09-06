@@ -2,6 +2,7 @@
 @import "input";
 @import "onboard";
 @import "login";
+@import "sign-up";
 
 body {
     padding: 0;
@@ -12,3 +13,12 @@ body {
     display: flex;
     min-height: 100vh;
 }
+
+.link {
+    color: #4577a2;
+    display: flex;
+    align-items: flex-end;
+    padding-left: $spacing-xx-small;
+    font-size: $font-size-text-small;
+    border-bottom: 1px solid #4577a2;
+  }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel serve src/pages/*.html",
+    "start": "parcel serve src/pages/sign-up.html",
     "build": "parcel build src/pages/*.html --out-dir build --public-url ./ --no-source-maps"
   },
   "keywords": [
