@@ -1,11 +1,21 @@
+@import "media-query";
 .onboard {
   display: flex;
+  @include mq(small) {
+    flex-direction: column;
+  }
   .onboard-lhs {
     flex: 2;
+    @include mq(small) {
+      flex: 0;
+    }
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: $spacing-xx-large;
+    @include mq(small) {
+      padding: $spacing-medium $spacing-xx-large;
+    }
     background: $primary-color;
     header {
       display: flex;
@@ -15,8 +25,14 @@
       font-size: $font-size-title;
       font-weight: $font-weight-bold;
       color: $white-color;
+      @include mq(small) {
+        padding-bottom: 0;
+      }
     }
     section {
+      @include mq(small) {
+        display: none;
+      }
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -24,6 +40,7 @@
         padding: $spacing-small;
         height: $height_antenna;
         margin: $spacing-xx-large;
+        margin-top: $spacing-large
       }
       p {
         display: flex;
