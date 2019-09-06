@@ -6,9 +6,9 @@
   <body>
     <header class="report-header">
       <span class="title">EEPlus</span>
-      <span style="float:right">
+      <a class="link" href="generate-report.html">
         <button class="button"><span>Generat Report</span></button>
-      </span>
+      </a>
     </header>
     <main class="report-main">
       <div class="block">
@@ -17,24 +17,26 @@
           <h4>View and Download your previous reports here.</h4>
         </div>
         <div class="logout-button">
-          <div class="flex"><img src="../assets/logout.svg" alt="antanna" /><a href="index.html">Logout</a></div>
+          <div class="flex"><img src="../assets/logout.svg" alt="antanna" /><a class="link" href="index.html">Logout</a></div>
         </div>
       </div>
       <section class="flex">
         <div class="report">
           <div class="title">Reports</div>
           <div class="report-card">
-              <div><img src="../assets/report_map.svg" alt="antanna" /></div>
+              <div><img src="../assets/report-map.svg" alt="map" /></div>
               <div class="name-section"><h4>Burleson</h4><h5>Travis, Texas</h5></div>
-              <span><img src="../assets/eye.svg" alt="antanna" /><a href="/">View</a></span>
-              <span><img src="../assets/forward.svg" alt="antanna" /><a href="/">Download</a></span>
+              <span><img src="../assets/eye.svg" alt="eye" /><a class="link" href="/">View</a></span>
+              <span><img src="../assets/forward.svg" alt="download-report" /><a class="link" href="/">Download</a></span>
             </div>
           </div>
         </div>
         <div class="aside">
           <div class="title"><div>Your subscription</div></div>
           <h4>Unlimited Access to our databases for lifetime.</h4>
-          <div><span><a href="/">Download Invoice</a></span></div>
+          <span class="flex">
+            <img src="../assets/forward.svg" alt="download_report" />
+            <a class="link" href="/">Download Invoice</a></span>
         </div>
       </section>
     </main>

@@ -1,0 +1,22 @@
+.country-report {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: $primary-color;
+  color: $white-color;
+  .country-header {
+    display: flex;
+    padding: $spacing-medium 0;
+    margin: 0 $spacing-medium;
+    border-bottom: 1px solid $white-color;
+    img {
+      padding: $spacing-medium;
+    }
+    .label {
+      font-size: $font-size-title-small;
+    }
+    .title {
+      font-size: $font-size-title;
+    }
+  }
+}
