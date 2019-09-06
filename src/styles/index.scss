@@ -33,7 +33,28 @@ body {
     border-bottom: 1px solid #4577a2;
   }
 
+  .link-with-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: $font-size-text-small;
+    a {
+      padding: 0 $spacing-xx-small;
+    }
+  }
+
   .rest-button {
   margin-top: $spacing-xx-large;
+  }
 
+  .reset-success-detail {
+    padding-top: $spacing-small;
+  }
+
+  .go-back {
+    display: flex;
+    padding-top: $spacing-large;
+    img {
+      width: 1vw;
+    }
   }
