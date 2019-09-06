@@ -1,0 +1,36 @@
+.payment-info {
+    padding-top: $spacing-small;
+    b{
+    color: black;
+    }
+}
+
+.encryption-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-tags;
+    padding: $spacing-small;
+}
+.paymetnt-tip {
+    padding: $spacing-x-small 0 !important;
+    font-size: $font-size-tags;
+    opacity: 0.9;
+}
+
+.payment-button {
+    margin-top: $spacing-medium;
+}
+.date-and-cvv {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: $spacing-small;
+    flex-direction: row;
+    .date {
+      padding-right: $spacing-small;
+    }
+    .date, .cvv {
+      display: flex;
+      flex-direction: column;
+    }
+}
