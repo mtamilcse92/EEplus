@@ -1,4 +1,5 @@
 @import "variables";
+@import "flex-mixin";
 @import "media-query";
 @import "common";
 @import "input";
@@ -18,14 +19,14 @@ body {
   font-family: $font-sans-serif;
 }
 .wrapper {
-  display: flex;
+  @include flex-mixin;
   min-height: 100vh;
 }
 .flex {
-  display: flex;
+  @include flex-mixin;
 }
 .flex-auto {
-  flex: 1 1 auto;
+  @include flex-mixin($flexSize: 1 1 auto);
   min-width: 0;
   min-height: 0;
 }
@@ -34,28 +35,25 @@ a {
   text-decoration: none;
 }
 
-.link-with-text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: $font-size-text-small;
-  a {
-    padding: 0 $spacing-xx-small;
-  }
-}
-
 .rest-button {
   margin-top: $spacing-xx-large;
 }
 
 .reset-success-detail {
+  font-size: $font-size-text;
+  a {
+    font-size: $font-size-text;
+  }
+  @include mq(small) {
+    font-size: $font-size-responsive-text-small;
+    a {
+      font-size: $font-size-responsive-text-small;
+    }
+  }
   padding-top: $spacing-small;
 }
 
 .go-back {
-  display: flex;
+  padding: 0;
   padding-top: $spacing-large;
-  img {
-    width: 1vw;
-  }
 }

@@ -6,6 +6,7 @@
   border-radius: $border-radius-chip;
   background: #f0f6f6;
   padding: $spacing-small;
+  font-family: $font-sans-serif;
   text-transform: capitalize;
 }
 
@@ -15,8 +16,7 @@
   justify-content: center;
   flex-direction: row;
   color: $white-color;
-  font-size: $font-size-button;
-  // font-weight: $font-weight-bold;
+  font-weight: $font-weight-bold;
   padding: $spacing-small;
   border-radius: $border-radius-chip;
   background: #42bfdd;

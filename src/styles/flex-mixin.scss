@@ -1,0 +1,16 @@
+@mixin flex-mixin(
+  $justifyContent: null,
+  $alignItems: null,
+  $flexDirection: null,
+  $flexSize: null,
+  $flexGrow: null,
+  $flexWrap: null
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex: $flexSize;
+  flex-direction: $flexDirection;
+  flex-grow: $flexGrow;
+  flex-wrap: $flexWrap;
+}

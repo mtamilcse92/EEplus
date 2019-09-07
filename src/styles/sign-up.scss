@@ -1,13 +1,16 @@
 .terms {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: $font-size-text-small;
-  padding-top: $spacing-xx-small;
+  @include flex-mixin(null, center, row);
+  @include mq(small) {
+  font-size: $font-size-text;
+  }
+  @include mq(medium) {
+    font-size: $font-size-text-small;
+  }
+  font-size: $font-size-medium;
+  padding-top: $spacing-small;
   padding-bottom: $spacing-large;
   span {
-    flex-wrap: wrap;
-    display: flex;
+    @include flex-mixin($flexWrap: wrap);
     padding-left: $spacing-xx-small;
     a {
       padding: 0 $spacing-xx-small;
@@ -16,26 +19,27 @@
 }
 
 .sign-up-form {
-    display: flex;
-    flex-direction: column;
-    color: $black-x-color;
-    padding-top: $spacing-small;
-    .user-name {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      .first-name {
-        padding-right: $spacing-small;
-      }
-      .first-name, .last-name {
-        display: flex;
-        flex-direction: column;
-      }
+  @include flex-mixin($flexDirection: column, $flexGrow: 1);
+  color: $black-x-color;
+  padding-top: $spacing-small;
+  .user-name {
+    @include flex-mixin(space-between, null, row);
+    @include mq(small) {
+    @include flex-mixin($flexDirection:column);
     }
-    .form-sub-head {
-      padding: $spacing-x-small 0;
+    .first-name {
+      padding-right: $spacing-small;
     }
-    .form-input {
-      margin-bottom: $spacing-xxx-small;
+    .first-name,
+    .last-name {
+      @include flex-mixin($flexDirection: column, $flexSize: 1);
     }
   }
+  .form-sub-head {
+    font-size: $font-size-medium;
+    padding: $spacing-x-small 0;
+  }
+  .form-input {
+    margin-bottom: $spacing-xxx-small;
+  }
+}

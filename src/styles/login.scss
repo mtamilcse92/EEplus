@@ -1,8 +1,7 @@
 @import "variables";
 .remember-me {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include flex-mixin(null, center,$flexDirection: row);
+  font-size: $font-size-medium;
   padding-top: $spacing-medium;
   padding-bottom: $spacing-large;
   span {
@@ -11,11 +10,11 @@
 }
 
 .login-form {
-  display: flex;
-  flex-direction: column;
+  @include flex-mixin($flexDirection: column, $flexGrow: 1);
   color: $black-x-color;
   padding-top: $spacing-medium;
   .form-sub-head {
+    font-size: $font-size-medium;
     padding: $spacing-small 0;
   }
   .form-input {
@@ -23,18 +22,3 @@
   }
 }
 
-.user-login-option {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: $spacing-large;
-  
-  .forgot-password {
-    flex: 1;
-    display: flex;
-  }
-  .new-user {
-    display: flex;
-    justify-content: flex-end;
-  }
-}

@@ -1,32 +1,54 @@
 .header {
-    display: flex;
+  @include flex-mixin;
     background: $primary-color;
     font-family: $font-regular;
     letter-spacing: $spacing-xxx-small;
-    padding: $spacing-medium $spacing-xx-large;
+    padding: $spacing-medium 0;
     font-size: $font-size-title;
     font-weight: $font-weight-bold;
     color: $white-color;
     justify-content: space-between;
   }
 
+  .flex-grow {
+    flex-grow: 1;
+  }
+
   .link {
     color: #4577a2;
-    display: flex;
-    align-items: flex-end;
-    font-size: $font-size-text-small;
+    @include flex-mixin(null, flex-end);
+    font-size: $font-size-medium;
     border-bottom: 1px solid #4577a2;
+    @include mq(small) {
+      font-size: $font-size-responsive-text-small;
+    }
+    @include mq(medium) {
+      font-size: $font-size-text-small;
+    }
   }  
 
   .image-with-link {
-    display: flex;
-    align-items: center;
+    @include flex-mixin(null, center);
     cursor: pointer;
     padding: $spacing-large;
+    @include mq(small) {
+      padding: $spacing-medium;
+    }
     img {
       padding-right: $spacing-x-small;
       width: 1vw;
       height: 1vh;
+    }
+  }
+
+  .link-with-text {
+    font-size: $font-size-medium;
+    display: flex;
+    @include mq(small) {
+      font-size: $font-size-responsive-text-small;
+    }
+    @include mq(medium) {
+      font-size: $font-size-text-small;
     }
   }
 
@@ -35,15 +57,26 @@
       border-bottom: none;
   }
 
+  .description {
+    @include flex-mixin;
+    color: $black-color;
+    padding: $spacing-medium 0;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-text;
+  }
+
   .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    @include flex-mixin(flex-end);
     font-size: $font-size-text-small;
     color: $black-color;
-    text-align: right;
-    p {
-        padding-right: $spacing-xx-large;
+  }
+
+  .back-image {
+    @include mq(small) {
+      width: 4vw !important;
+      height: 2vh !important;
     }
   }

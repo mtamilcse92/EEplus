@@ -1,75 +1,64 @@
 .onboard {
-  display: flex;
+  @include flex-mixin;
   @include mq(small) {
     flex-direction: column;
   }
   .onboard-lhs {
     flex: 2;
-    @include mq(small) {
-      flex: 0;
+    @include mq(landscape) {
+      flex: 1.4;
     }
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include mq(small) {
+     flex: 0;
+     padding: $spacing-large;
+     padding-bottom: 0;
+    }
+    @include flex-mixin(flex-start, null, column);
     padding: $spacing-xx-large;
-    @include mq(small) {
-      padding: $spacing-medium $spacing-xx-large;
-    }
+    padding-bottom: 0;
     background: $primary-color;
-    header {
-      display: flex;
-      font-family: $font-regular;
-      letter-spacing: $spacing-xxx-small;
-      padding-bottom: $spacing-xx-large;
-      font-size: $font-size-title;
-      font-weight: $font-weight-bold;
-      color: $white-color;
-      @include mq(small) {
-        padding-bottom: 0;
-      }
-    }
     section {
       @include mq(small) {
         display: none;
       }
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include flex-mixin(center, null, column);
       img {
         padding: $spacing-small;
         height: $height_antenna;
         margin: $spacing-xx-large;
-        margin-top: $spacing-large
+        margin-top: $spacing-large;
       }
       p {
-        display: flex;
         padding: 0 7rem;
         text-align: center;
-        font-weight: $font-weight-regular;
         color: $white-color;
+        @include mq(medium) {
+          padding: $spacing-large;
+        }
       }
     }
   }
   .onboard-rhs {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    @include flex-mixin(flex-start, null, column, 1, 1);
     padding: $spacing-xx-large;
-    justify-content: flex-start;
+    padding-bottom: 0;
     color: $black-x-color;
     font-weight: $font-weight-regular;
     @include mq(small) {
-      padding: $spacing-x-large;
+      padding: $spacing-large;
     }
     .form-tip {
+      font-size: $font-size-medium;
       padding-top: $spacing-medium;
     }
     header {
-      display: flex;
-      letter-spacing: $spacing-xxx-small;
-      font-size: $font-size-title;
-      font-weight: $font-weight-bold;
+      background: transparent;
       color: $black-color;
     }
   }
+}
+
+.user-login-option {
+  @include flex-mixin(space-between, center, row);
+  padding-top: $spacing-large;
 }

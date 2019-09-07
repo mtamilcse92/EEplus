@@ -1,15 +1,22 @@
-$medium-screen: 40em;
-$large-screen: 60em;
-$xlarge-screen: 80em;
+$small-screen: 599px;
+$medium-screen: 600px;
+$landscape: 900px;
+$large-screen: 1200px;
+$xlarge-screen: 1800px;
 
 @mixin mq($mq) {
   @if $mq == small {
-    @media (max-width: $medium-screen) {
+    @media (max-width: $small-screen) {
       @content;
     }
   }
   @if $mq == medium {
     @media (min-width: $medium-screen) {
+      @content;
+    }
+  }
+  @if $mq == landscape {
+    @media (min-width: $landscape) {
       @content;
     }
   }
