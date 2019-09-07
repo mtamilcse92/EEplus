@@ -8,10 +8,152 @@
 </head>
 
 <body>
-  <div class="wrapper report-wrapper">
-      <header class="header">EE Plus</header>
-    
-  </div>
+    <div class="wrapper report-wrapper">
+        <header class="header">EE Plus</header>
+        <div class="sub-header">
+            <div class="image-with-link">
+                <img src="../assets/backward.svg" alt="antanna" />
+                <a href="index.html" class="link disable-border">To Home</a>
+            </div>
+            <div class="report-options">
+                <div class="image-with-link">
+                    <img class="image" src="../assets/print.svg" alt="antanna" />
+                    <a href="index.html" class="link">Print</a>
+                </div>
+                <div class="image-with-link">
+                    <img class="image" src="../assets/download.svg" alt="antanna" />
+                    <a href="index.html" class="link">Download</a>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="selected-location">
+                <span>Qualitative Assessment of Generation Interconnection at </span>
+                <span class="location">Burleson, Travis County, Texas, TX</span>
+                <span class="requested-by">Requested by <b>Charles Maddock, Open Road</b></span>
+            </div>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="heading">Sub-Station Overview</div>
+            <ul class="overview-list">
+                <li class="overview-item">Lorem ipsum dolor sit amet </li>
+                <li class="overview-item">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. </li>
+                <li class="overview-item">Ut enim ad minim veniam </li>
+                <li class="overview-item">Quis nostrud exercitation </li>
+                <li class="overview-item">Ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
+                <li class="overview-item">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. </li>
+                <li class="overview-item">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum, ed do eiusmod tempor incididunt ut labore et dolore magna aliq.
+                </li>
+            </ul>
+            <div class="heading">Sales</div>
+            <div class="report-chart">
+                <div class="chart-wrapper">
+                    <span class="chart-header">Existing Generation at and up to 2 bus radii from Station (by fuel
+                        Type)</span>
+                    <div class="pie-chart">
+                        <canvas id="existing"></canvas>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <span class="chart-header">Future Committed Generation at and up to 2 bus radii from Station (by
+                        fuel Type)</span>
+                    <div class="pie-chart">
+                        <canvas id="future-commited"></canvas>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <span class="chart-header">Future uncommitted Generation at and up to 2 bus radii from Station (by
+                        fuel Type)</span>
+                    <div class="pie-chart">
+                        <canvas id="future-uncommited"></canvas>
+                    </div>
+                </div>
+            </div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <br><br>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                <br><br>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et
+                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+                corrupti quos dolores et quas molestias excepturi sin occaecati cupiditate non provident, similique sunt
+                in culpa qui officia deserunt mollitia animi.
+            </p>
+            <p class="queries">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. <b>For more Queries: queries@eeplus.com</b>
+            </p>
+        </section>
+    </div>
+    <div class="footer">
+        <p>©2019 EE Plus LLP.,</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        const charts = ["existing", "future-commited", "future-uncommited"];
+        for (const chart of charts) {
+            const ctx = document.getElementById(chart).getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: [
+                        'Red',
+                        'Orange',
+                        'Yellow',
+                        'Green',
+                        'Blue'
+                    ],
+                    datasets: [{
+                        backgroundColor: [
+                            "#2ecc71",
+                            "#3498db",
+                            "#95a5a6",
+                            "#9b59b6",
+                            "#f1c40f",
+                            "#e74c3c",
+                            "#34495e"
+                        ],
+                        data: [12, 19, 3, 17, 28, 24, 7]
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false,
+                        fullWidth: true,
+                        valign: "middle",
+                        position: "right",
+                        labels: {
+                            padding: 50,
+                            fontSize: 30,
+                            fontColor: '#34312d',
+                            fontFamily: "'Cabin', sans-serif",
+                            boxWidth: 30,
+                            boxHeight: 2
+                        }
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

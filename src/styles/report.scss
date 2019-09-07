@@ -1,3 +1,114 @@
+@import "media-query";
 .report-wrapper {
+  flex-direction: column;
+  .sub-header {
+    display: flex;
+    background: #f0f6f6;
+    flex-direction: row;
+    .to-home {
+      display: flex;
+      flex: 1;
+    }
+    .report-options {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      flex-direction: row;
+      .image {
+        width: auto;
+        height: 2vh;
+      }
+    }
+  }
+  section {
+    padding: $spacing-xx-large;
+    display: flex;
+    height: 66vh;
+    overflow-y: scroll;
     flex-direction: column;
+  }
+  .selected-location {
+    display: flex;
+    flex-direction: column;
+    color: $black-color;
+    padding-bottom: $spacing-x-small;
+    font-size: $font-size-title;
+    .location {
+      padding-top: $spacing-x-small;
+      font-weight: $font-weight-bold;
+    }
+    .requested-by {
+      padding-top: $spacing-x-small;
+      font-size: $font-size-sub-title;
+      b {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+  .description {
+    display: flex;
+    color: $black-color;
+    padding: $spacing-medium 0;
+    font-size: $font-size-text;
+  }
+
+  .heading {
+    display: flex;
+    color: $primary-color;
+    padding-bottom: $spacing-small;
+    font-size: $font-size-title-small;
+  }
+  .overview-list {
+    margin: 0;
+    list-style: none;
+    padding-bottom: $spacing-x-large;
+    li::before {
+      content: "\2022";
+      color: $primary-color;
+      font-size: $font-size-title;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+    }
+    .overview-item {
+      padding-bottom: $spacing-medium;
+    }
+  }
+  .report-chart {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: $spacing-xx-large;
+    @include mq(small) {
+      justify-content: center;
+    }
+    .chart-wrapper {
+      flex: 0 50%;
+      .chart-header {
+        padding: $spacing-large;
+        display: flex;
+        color: $black-color;
+        font-size: $font-size-text;
+      }
+      .pie-chart {
+        display: flex;
+        justify-content: center;
+        .chart-label-list {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        canvas {
+          width: 347px !important;
+          height: 296px !important;
+        }
+      }
+    }
+  }
+  .queries {
+      color: $primary-color;
+      padding-top: $spacing-xx-large;
+      font-size: $font-size-sub-title-small;
+  }
 }

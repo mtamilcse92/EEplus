@@ -9,10 +9,12 @@
 @import "payment";
 @import "report";
 
+@import "country-report";
 
 body {
   padding: 0;
   margin: 0;
+  letter-spacing: 1px;
   font-family: $font-sans-serif;
 }
 .wrapper {
@@ -32,37 +34,28 @@ a {
   text-decoration: none;
 }
 
-.link {
-    color: #4577a2;
-    display: flex;
-    align-items: flex-end;
-    padding-left: $spacing-xx-small;
-    font-size: $font-size-text-small;
-    border-bottom: 1px solid #4577a2;
+.link-with-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: $font-size-text-small;
+  a {
+    padding: 0 $spacing-xx-small;
   }
+}
 
-  .link-with-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: $font-size-text-small;
-    a {
-      padding: 0 $spacing-xx-small;
-    }
-  }
-
-  .rest-button {
+.rest-button {
   margin-top: $spacing-xx-large;
-  }
+}
 
-  .reset-success-detail {
-    padding-top: $spacing-small;
-  }
+.reset-success-detail {
+  padding-top: $spacing-small;
+}
 
-  .go-back {
-    display: flex;
-    padding-top: $spacing-large;
-    img {
-      width: 1vw;
-    }
+.go-back {
+  display: flex;
+  padding-top: $spacing-large;
+  img {
+    width: 1vw;
   }
+}

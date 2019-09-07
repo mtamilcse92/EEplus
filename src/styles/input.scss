@@ -16,13 +16,13 @@
   flex-direction: row;
   color: $white-color;
   font-size: $font-size-button;
-  font-weight: $font-weight-bold;
+  // font-weight: $font-weight-bold;
   padding: $spacing-small;
   border-radius: $border-radius-chip;
   background: #42bfdd;
   border: none;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: $font-size-button;
   img {
     width: 1.5vw;
   }

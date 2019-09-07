@@ -3,8 +3,47 @@
     background: $primary-color;
     font-family: $font-regular;
     letter-spacing: $spacing-xxx-small;
-    padding: $spacing-large $spacing-xx-large;
+    padding: $spacing-medium $spacing-xx-large;
     font-size: $font-size-title;
     font-weight: $font-weight-bold;
     color: $white-color;
+    justify-content: space-between;
+  }
+
+  .link {
+    color: #4577a2;
+    display: flex;
+    align-items: flex-end;
+    font-size: $font-size-text-small;
+    border-bottom: 1px solid #4577a2;
+  }  
+
+  .image-with-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: $spacing-large;
+    img {
+      padding-right: $spacing-x-small;
+      width: 1vw;
+      height: 1vh;
+    }
+  }
+
+  .disable-border {
+      border: none;
+      border-bottom: none;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: $font-size-text-small;
+    color: $black-color;
+    text-align: right;
+    p {
+        padding-right: $spacing-xx-large;
+    }
   }

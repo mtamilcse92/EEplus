@@ -2,8 +2,11 @@
   overflow: hidden;
   background-color: $primary-color;
   height: $navbar_height;
-  padding: $spacing-small $spacing-small 0px;
+  padding: 0 $spacing-small;
+  display: flex;
+  align-items: center;
   .title {
+    flex: 1 auto;
     font-size: $font-size-title;
     color: $white-color;
   }
