@@ -1,11 +1,14 @@
 @import "variables";
 @import "media-query";
+@import "common";
 @import "input";
 @import "onboard";
 @import "login";
 @import "sign-up";
 @import "home";
 @import "payment";
+@import "report";
+
 
 body {
   padding: 0;

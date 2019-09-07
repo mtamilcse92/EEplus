@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    background: $primary-color;
+    font-family: $font-regular;
+    letter-spacing: $spacing-xxx-small;
+    padding: $spacing-large $spacing-xx-large;
+    font-size: $font-size-title;
+    font-weight: $font-weight-bold;
+    color: $white-color;
+  }

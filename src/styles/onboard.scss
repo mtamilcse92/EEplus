@@ -1,4 +1,3 @@
-@import "media-query";
 .onboard {
   display: flex;
   @include mq(small) {
@@ -59,6 +58,9 @@
     justify-content: flex-start;
     color: $black-x-color;
     font-weight: $font-weight-regular;
+    @include mq(small) {
+      padding: $spacing-x-large;
+    }
     .form-tip {
       padding-top: $spacing-medium;
     }

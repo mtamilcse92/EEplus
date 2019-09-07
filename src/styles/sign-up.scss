@@ -6,6 +6,7 @@
   padding-top: $spacing-xx-small;
   padding-bottom: $spacing-large;
   span {
+    flex-wrap: wrap;
     display: flex;
     padding-left: $spacing-xx-small;
     a {
