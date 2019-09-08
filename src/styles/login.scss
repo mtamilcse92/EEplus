@@ -4,6 +4,9 @@
   font-size: $font-size-medium;
   padding-top: $spacing-medium;
   padding-bottom: $spacing-large;
+  @include mq(small) {
+    font-size: $font-size-responsive-text-small;
+  }
   span {
     padding-left: $spacing-xx-small;
   }

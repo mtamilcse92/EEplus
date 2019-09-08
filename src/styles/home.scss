@@ -3,6 +3,7 @@
   @include flex-mixin($flexDirection: column);
   .logout-link {
     padding-top: 0;
+    padding-right: 0;
   }
   .block {
     @include flex-mixin(space-between, end);
@@ -23,6 +24,9 @@
     .report {
       @include flex-mixin($flexDirection: column, $flexSize: 2);
       padding-right: $spacing-x-large;
+      @include mq(small) {
+        padding-right: 0;
+      }
       .report-card {
         @include flex-mixin;
         padding: $spacing-medium 0;
@@ -41,6 +45,9 @@
         .report-option {
           padding-left: 0;
           padding-bottom: $spacing-small;
+          @include mq(small) {
+            padding-right: $spacing-x-small;
+          }
           align-items: flex-end;
         }
       }

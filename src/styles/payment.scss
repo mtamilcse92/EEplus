@@ -6,9 +6,7 @@
 }
 
 .encryption-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-mixin(center, center);
     font-size: $font-size-tags;
     padding: $spacing-small;
 }
@@ -22,15 +20,14 @@
     margin-top: $spacing-medium;
 }
 .date-and-cvv {
-    display: flex;
-    justify-content: space-between;
+    @include flex-mixin(space-between, $flexDirection: row);
     padding-bottom: $spacing-small;
-    flex-direction: row;
     .date {
-      padding-right: $spacing-small;
+        padding-right: $spacing-small;
     }
     .date, .cvv {
-      display: flex;
+        display: flex;
+        width: 48%;
       flex-direction: column;
     }
 }

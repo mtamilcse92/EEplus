@@ -5,6 +5,7 @@
   border: none;
   border-radius: $border-radius-chip;
   background: #f0f6f6;
+  font-size: $font-size-medium;
   padding: $spacing-small;
   font-family: $font-sans-serif;
   text-transform: capitalize;
@@ -23,7 +24,7 @@
   background: #42bfdd;
   border: none;
   align-items: center;
-  font-size: 0.825rem;
+  font-size: $font-size-medium;
   img {
     margin-left: $spacing-xx-small;
     width: 15px;
