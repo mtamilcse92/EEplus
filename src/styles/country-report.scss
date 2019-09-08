@@ -101,7 +101,6 @@
       .state-name-weapper {
         height: 60vh;
         overflow: auto;
-        overflow-y: scroll;
         @include flex-mixin(flex-start, $flexSize: 2);
         .state-name {
           @include flex-mixin(flex-start, $flexSize: 2, $flexWrap: wrap);
