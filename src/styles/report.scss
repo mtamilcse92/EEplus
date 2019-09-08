@@ -110,6 +110,8 @@
 
 .chartjsLegend {
   padding-left: $spacing-large;
+  color: $black-color;
+  @include flex-mixin(center, center);
   li {
     span{
       display: inline-block;
