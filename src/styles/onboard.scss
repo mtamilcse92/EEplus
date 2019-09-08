@@ -68,4 +68,5 @@
 .user-login-option {
   @include flex-mixin(space-between, center, row);
   padding-top: $spacing-large;
+  padding-bottom: $spacing-small;
 }

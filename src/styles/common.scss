@@ -116,11 +116,13 @@ input[type="text"] {
   }
 
   .footer {
-    position: fixed;
-    left: 0;
+    position: absolute;
+    right: 0;
     bottom: 0;
+    left: 0;
     text-align: right;
     p {
+      padding-top: $spacing-medium;
       padding-right: $spacing-x-large;
     }
     width: 100%;
@@ -128,9 +130,6 @@ input[type="text"] {
     color: $black-color;
   }
 
-  // .responsive-image {
-  //   @include mq(small) {
-  //     width: 4vw !important;
-  //     height: 2vh !important;
-  //   }
-  // }
+  .pick-report {
+    background-color: $primary-color;
+  }
