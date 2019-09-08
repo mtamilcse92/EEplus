@@ -103,6 +103,11 @@ input[type="text"] {
       border-bottom: none;
   }
 
+  ul {
+    list-style-type: none;
+    padding-inline-start: 15px;
+  }
+
   .description {
     @include flex-mixin;
     color: $black-color;

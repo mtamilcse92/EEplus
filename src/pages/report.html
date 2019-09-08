@@ -58,6 +58,7 @@
                         Type)</span>
                     <div class="pie-chart">
                         <canvas id="existing"></canvas>
+                        <div id='existing-legend' class='chartjsLegend'></div>
                     </div>
                 </div>
                 <div class="chart-wrapper">
@@ -65,6 +66,7 @@
                         fuel Type)</span>
                     <div class="pie-chart">
                         <canvas id="future-commited"></canvas>
+                        <div id='future-commited-legend' class='chartjsLegend'></div>
                     </div>
                 </div>
                 <div class="chart-wrapper">
@@ -72,6 +74,7 @@
                         fuel Type)</span>
                     <div class="pie-chart">
                         <canvas id="future-uncommited"></canvas>
+                        <div id='future-uncommited-legend' class='chartjsLegend'></div>
                     </div>
                 </div>
             </div>
@@ -137,9 +140,9 @@
                 },
                 options: {
                     tooltips: {
-    titleFontSize: 50,
-    bodyFontSize: 50
-  }
+                        titleFontSize: 35,
+                        bodyFontSize: 35
+                    }
 ,
                     legend: {
                         display: false,
@@ -147,16 +150,17 @@
                         valign: "middle",
                         position: "right",
                         labels: {
-                            padding: 50,
-                            fontSize: 30,
+                            padding: 10,
+                            fontSize: 20,
                             fontColor: '#34312d',
                             fontFamily: "'Cabin', sans-serif",
-                            boxWidth: 30,
+                            boxWidth: 20,
                             boxHeight: 2
                         }
                     }
                 }
             });
+            document.getElementById(`${chart}-legend`).innerHTML = myChart.generateLegend();
         }
     </script>
 </body>
