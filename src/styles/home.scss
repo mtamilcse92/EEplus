@@ -1,31 +1,16 @@
-.report-header {
-  overflow: hidden;
-  background-color: $primary-color;
-  height: $navbar_height;
-  padding: 0 $spacing-small;
-  display: flex;
-  align-items: center;
-  .title {
-    flex: 1 auto;
-    font-size: $font-size-title;
-    color: $white-color;
-  }
-}
 
 .report-main {
   padding: $spacing-x-large;
+  @include flex-mixin($flexDirection: column);
+  .logout-link {
+    padding-top: 0;
+  }
   .block {
-    height: 6rem;
-    display: flex;
-    align-items: center;
+    @include flex-mixin(space-between, end);
+    color: $black-color;
     padding: $spacing-medium 0;
+    padding-bottom: $spacing-x-large;
     border-bottom: $border;
-    .block-section {
-      flex: 1 1 auto;
-    }
-    .logout-button {
-      float: right;
-    }
   }
   section {
     padding: $spacing-x-large 0;
@@ -34,28 +19,49 @@
       font-weight: bold;
     }
     .report {
-      flex: 1 1 auto;
-      padding: $spacing-medium 0;
+      @include flex-mixin($flexDirection: column,$flexSize: 2);
+      padding-right: $spacing-x-large;
       .report-card {
-        display: flex;
+        @include flex-mixin;
         padding: $spacing-medium 0;
         border-bottom: $border;
+        .location {
+          @include flex-mixin($flexDirection:row,$flexSize: 1);
+          img {
+            width: 4em;
+            height: 4em;;
+          }
+        }
         .name-section {
           padding: 0 $spacing-medium;
-          flex: 1 1 auto;
+          @include flex-mixin(center, baseline, $flexDirection: column);
         }
-        span {
-          display: flex;
-          align-items: center;
-          padding: 0 $spacing-x-large;
+        .report-option {
+          padding-left: 0;
+          padding-bottom: $spacing-small;
+          align-items: flex-end;
         }
       }
     }
     .aside {
-      width: 320px;
+      @include flex-mixin($flexDirection: column);
       height: 40vh;
-      padding: $spacing-medium;
+      padding: 0 $spacing-xx-large ;
       border-left: $border;
+      .access-text {
+        padding-top: $spacing-medium;
+      }
+      .download-invoice {
+        padding: $spacing-medium 0;
+      }
     }
   }
+}
+
+.report-home-header {
+  padding-bottom: $spacing-large;
+}
+
+.logout-image {
+  height: 2vh !important;
 }

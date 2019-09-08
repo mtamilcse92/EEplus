@@ -8,6 +8,37 @@
     font-weight: $font-weight-bold;
     color: $white-color;
     justify-content: space-between;
+    &.include-padding {
+      padding: $spacing-medium $spacing-x-large;
+    }
+    &.with-no-background {
+      background: transparent;
+      color: $black-color;
+    }
+  }
+
+  .sub-header {
+    @include flex-mixin;
+    font-family: $font-regular;
+    font-size: $font-size-x-title;
+    font-weight: $font-weight-bold;
+    color: $black-color;
+  }
+
+  .sub-header-medium {
+    @include flex-mixin;
+    font-family: $font-regular;
+    font-size: $font-size-title-small;
+    color: $black-color;
+    padding-bottom: $spacing-xxx-small;
+  }
+
+  .text-small {
+    @include flex-mixin;
+    font-family: $font-regular;
+    font-size: $font-size-text-small;
+    color: $black-color;
+    padding-bottom: $spacing-xxx-small;
   }
 
   .flex-grow {
@@ -36,8 +67,12 @@
     }
     img {
       padding-right: $spacing-x-small;
-      width: 1vw;
-      height: 1vh;
+      width: 2vw;
+      height: 2vh;
+      @include mq(small) {
+        width: 1vw !important;
+        height: 1vh !important;
+      }
     }
   }
 
@@ -74,7 +109,7 @@
     color: $black-color;
   }
 
-  .back-image {
+  .responsive-image {
     @include mq(small) {
       width: 4vw !important;
       height: 2vh !important;

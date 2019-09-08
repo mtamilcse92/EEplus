@@ -2,47 +2,45 @@
 <html dir="ltr" lang="en" class="no-js">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/index.scss">
 </head>
 
 <body>
-    <header class="header">EE Plus <a class="link" href="state-report.html">
-        <button class="button"><span>Generate Report</span></button>
-      </a></header>
+  <header class="header include-padding">EE Plus <a class="link" href="state-report.html">
+      <button class="button"><span>Generate Report</span></button>
+    </a></header>
 
   <main class="report-main">
     <div class="block">
       <div class="block-section">
-        <h2>Welcome Charles Maddock</h2>
-        <h4>View and Download your previous reports here.</h4>
+        <div class="header with-no-background">Welcome Charles Maddock</div>
+        <div class="text-small">View and Download your previous reports here.</div>
       </div>
-      <div class="logout-button">
-        <div class="flex"><img src="../assets/logout.svg" alt="antanna" /><a class="link" href="index.html">Logout</a>
-        </div>
+      <div class="image-with-link logout-link"><img class="logout-image" src="../assets/logout.svg" alt="antanna" /><a class="link" href="index.html">Logout</a>
       </div>
     </div>
     <section class="flex">
       <div class="report">
-        <div class="title">Reports</div>
+        <div class="sub-header report-home-header">Reports</div>
         <div class="report-card">
-          <div><img src="../assets/report-map.svg" alt="map" /></div>
-          <div class="name-section">
-            <h4>Burleson</h4>
-            <h5>Travis, Texas</h5>
+          <div class="location">
+            <img src="../assets/report-map.svg" alt="map" />
+            <div class="name-section">
+              <span class="sub-header-medium">Burleson</span>
+              <span class="text-small">Travis, Texas</span>
+            </div>
           </div>
-          <span><img src="../assets/eye.svg" alt="eye" /><a class="link" href="/">View</a></span>
-          <span><img src="../assets/forward.svg" alt="download-report" /><a class="link" href="/">Download</a></span>
+          <span class="image-with-link report-option"><img src="../assets/eye.svg" alt="eye" /><a class="link" href="/">View</a></span>
+          <span class="image-with-link report-option"><img src="../assets/download.svg" alt="download-report" /><a class="link" href="/">Download</a></span>
         </div>
       </div>
       </div>
       <div class="aside">
-        <div class="title">
-          <div>Your subscription</div>
-        </div>
-        <h4>Unlimited Access to our databases for lifetime.</h4>
-        <span class="flex">
-          <img src="../assets/forward.svg" alt="download_report" />
+        <div class="sub-header report-home-header">Your subscription</div>
+        <span class="text-small access-text">Unlimited Access to our databases for lifetime.</span>
+        <span class="image-with-link download-invoice">
+          <img src="../assets/download.svg" alt="download_report" />
           <a class="link" href="/">Download Invoice</a></span>
       </div>
     </section>
