@@ -6,12 +6,15 @@
   .onboard-lhs {
     flex: 2;
     @include mq(landscape) {
-      flex: 1.4;
+      flex: 1.3;
+      padding: 2.5rem;
+      padding-bottom: 0;
     }
     @include mq(small) {
      flex: 0;
      padding: $spacing-large;
      padding-bottom: 0;
+     padding-top: 0;
     }
     @include flex-mixin(flex-start, null, column);
     padding: $spacing-xx-large;
@@ -46,6 +49,10 @@
     font-weight: $font-weight-regular;
     @include mq(small) {
       padding: $spacing-large;
+    }
+    @include mq(landscape) {
+      padding: 2.5rem;
+      padding-bottom: 0;
     }
     .form-tip {
       font-size: $font-size-medium;

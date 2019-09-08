@@ -1,4 +1,11 @@
 @import "media-query";
+
+.new-report-wrapper {
+  padding-top: 7rem !important;
+  @include mq(small) {
+    padding-top: 3rem !important;
+  }
+}
 .state-report {
   width: 100%;
   height: 100%;
@@ -6,10 +13,9 @@
   background-color: $primary-color;
   color: $white-color;
   .state-header {
-    align-items: center;
-    display: flex;
-    padding: $spacing-medium 0;
-    margin: 0 $spacing-medium;
+    @include flex-mixin(flex-start, center);
+    padding-bottom: 0;
+    margin: 0 $spacing-large;
     border-bottom: 1px solid $white-color;
     img {
       padding: $spacing-medium;
@@ -19,51 +25,98 @@
       color: #42bfdd;
     }
     .title {
+      @include flex-mixin;
       font-size: $font-size-title;
     }
   }
   .state-list-block {
-    padding: $spacing-medium $spacing-x-large;
+    @include flex-mixin($flexDirection: column);
+    padding: $spacing-medium;
+    padding-bottom: 0;
     .search-bar {
+      @include mq(small) {
+        flex-direction: column;
+      }
       padding: $spacing-x-large 0;
-      display: flex;
-      align-items: center;
+      padding-bottom: $spacing-large;
+      @include flex-mixin;
       .title-locater {
-        display: flex;
+      font-size: $font-size-title-small;
+      font-weight: $font-weight-bold;
+      @include mq(small) {
+        justify-content: flex-start;
+        padding-bottom: $spacing-small;
+      }
+        @include flex-mixin(center, center, $flexSize: 1);
         img {
           padding: 0 $spacing-medium;
+        }
+        a {
+          color: #BBE6E4 !important;
         }
       }
       div {
         flex: 1 auto;
         font-size: $font-size-title;
       }
-      input {
-        width: 30%;
-        background: #F0F6F6;
+      .search-wrapper {
+        @include flex-mixin(flex-end, $flexSize: 2);
+        input {
+          width: 40%;
+          @include mq(small) {
+            width: 80%;
+          }
+          height: 32px;
+          font-size: $font-size-text-small;
+          padding: $spacing-xxx-small $spacing-small;
+          background: #f0f6f6;
+        }
       }
     }
     .list-with-map {
-      display: flex;
-      img {
-        padding: $spacing-xx-large 0;
+      @include flex-mixin($flexSize: 1, $flexDirection: row);
+      .new-report-image {
+        padding: $spacing-medium $spacing-xx-large;
+        @include mq(small) {
+          display: none !important;
+        }
       }
-      .state-name {
-        display: flex;
-        flex-wrap: wrap;
-        div {
-          display: flex;
-          align-items: center;
-          min-width: 8rem;
-          padding: $spacing-medium;
-          img {
-            padding: 0 $spacing-x-small;
+      .state-image {
+        @include mq(small) {
+          display: none !important;
+        }
+        @include flex-mixin($flexSize: 1);
+        img {
+          width: 30vw;
+          height: 25vh;
+          padding: $spacing-xx-large 0;
+        }
+      }
+      .state-name-weapper {
+        height: 60vh;
+        overflow: auto;
+        overflow-y: scroll;
+        @include flex-mixin(flex-start, $flexSize: 2);
+        .state-name {
+          @include flex-mixin(flex-start, $flexSize: 2, $flexWrap: wrap);
+          div {
+            font-size: $font-size-text-small;
+            @include flex-mixin(flex-start, center);
+            min-width: 8rem;
+            max-width: 8rem;
+            padding: $spacing-medium;
+            img {
+              width: 20px;
+              height: 26px;
+              padding-right: $spacing-x-small;
+            }
           }
         }
       }
     }
+    
     .new-report-generator {
-      padding: 7rem 14rem;
+      @include flex-mixin($flexSize:2, $flexDirection: column);
       div {
         display: flex;
         align-items: center;
@@ -71,20 +124,18 @@
         img {
           padding: 0 $spacing-x-small;
         }
+        a {
+          color: #BBE6E4 !important;
+        }
       }
       .title {
-        font-size: $font-size-title-medium;
+        font-size: $font-size-title;
+        font-weight: $font-weight-bold;
       }
       li {
         font-size: $font-size-sub-title;
         line-height: $spacing-x-large;
       }
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .list-with-map imag {
-    display: none;
   }
 }

@@ -1,4 +1,3 @@
-
 .report-main {
   padding: $spacing-x-large;
   @include flex-mixin($flexDirection: column);
@@ -7,6 +6,9 @@
   }
   .block {
     @include flex-mixin(space-between, end);
+    .home-sub-header {
+      padding-top: 0px;
+    }
     color: $black-color;
     padding: $spacing-medium 0;
     padding-bottom: $spacing-x-large;
@@ -19,17 +21,17 @@
       font-weight: bold;
     }
     .report {
-      @include flex-mixin($flexDirection: column,$flexSize: 2);
+      @include flex-mixin($flexDirection: column, $flexSize: 2);
       padding-right: $spacing-x-large;
       .report-card {
         @include flex-mixin;
         padding: $spacing-medium 0;
         border-bottom: $border;
         .location {
-          @include flex-mixin($flexDirection:row,$flexSize: 1);
+          @include flex-mixin($flexDirection: row, $flexSize: 1);
           img {
             width: 4em;
-            height: 4em;;
+            height: 4em;
           }
         }
         .name-section {
@@ -46,8 +48,13 @@
     .aside {
       @include flex-mixin($flexDirection: column);
       height: 40vh;
-      padding: 0 $spacing-xx-large ;
+      padding: 0 $spacing-xx-large;
       border-left: $border;
+      @include mq(small) {
+        border-left: none !important;
+        padding: $spacing-x-large 0;
+        height: auto;
+      }
       .access-text {
         padding-top: $spacing-medium;
       }
@@ -55,6 +62,13 @@
         padding: $spacing-medium 0;
       }
     }
+  }
+}
+
+.report-detail-info {
+  @include flex-mixin($flexDirection: row);
+  @include mq(small) {
+    @include flex-mixin($flexDirection: column);
   }
 }
 

@@ -4,11 +4,12 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles/index.scss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div class="state-report">
-    <header class="state-header">
+    <header class="header state-header">
       <a href="home.html">
         <img src="../assets/backward-white.svg" alt="antanna" />
       </a>
@@ -22,68 +23,74 @@
         <div class="title-locater">
           <img src="../assets/locater.svg" alt="state" /> USA
         </div>
-        <input class="text-input" type="search" name="search" placeholder="Search.." />
-      </div>
-      <div class="list-with-map">
-        <img src="../assets/country-map.svg" alt="state" />
-        <div>
-          <div class="state-name">
-            <div>
-              <a class="flex" href="county-report.html">
-                <img src="../assets/locater-fill.svg" alt="state" /> Texas
-              </a>
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Alabama
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Connecticut
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Maine
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Missouri
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> New Mexico
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Oregon
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> New
-              Hampshire
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Texas
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> New
-              Hampshire
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> New
-              Hampshire
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> New
-              Hampshire
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> Missouri
-            </div>
-            <div>
-              <img src="../assets/locater-fill.svg" alt="state" /> New
-              Hampshire
-            </div>
-          </div>
+        <div class="search-wrapper">
+          <input class="text-input" type="search" name="search" placeholder="Search.." />
         </div>
       </div>
+      <div class="list-with-map">
+        <div class="state-image">
+          <img src="../assets/country-map.svg" alt="state" />
+        </div>
+        <div class="state-name-weapper">
+          <span>
+            <div class="state-name">
+              <div class="text-small">
+                <a class="flex" href="county-report.html">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Texas
+                </a>
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Alabama
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Connecticut
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Maine
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Missouri
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> New Mexico
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Oregon
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> New
+                Hampshire
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Texas
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> New
+                Hampshire
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> New
+                Hampshire
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> New
+                Hampshire
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> Missouri
+              </div>
+              <div>
+                <img src="../assets/locater-fill.svg" alt="state" /> New
+                Hampshire
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class="footer color-white">
+        <p>©2019 EE Plus LLP.,</p>
+      </div>
     </div>
-  </div>
-  <div class="footer">
-      <p>©2019 EE Plus LLP.,</p>
   </div>
   <main class="report-main"></main>
   <script src="../scripts/index.js"></script>

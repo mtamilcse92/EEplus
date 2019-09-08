@@ -9,7 +9,7 @@
 
 <body>
     <div class="wrapper report-wrapper">
-        <header class="header">EE Plus</header>
+        <header class="header include-padding">EE Plus</header>
         <div class="sub-header">
             <div class="image-with-link">
                 <img src="../assets/backward.svg" class="responsive-image" alt="antanna" />
@@ -102,10 +102,10 @@
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur. <b>For more Queries: queries@eeplus.com</b>
             </p>
-            <div class="footer">
-                <p>©2019 EE Plus LLP.,</p>
-            </div>
         </section>
+    </div>
+    <div class="footer">
+        <p>©2019 EE Plus LLP.,</p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
@@ -136,6 +136,11 @@
                     }]
                 },
                 options: {
+                    tooltips: {
+    titleFontSize: 50,
+    bodyFontSize: 50
+  }
+,
                     legend: {
                         display: false,
                         fullWidth: true,

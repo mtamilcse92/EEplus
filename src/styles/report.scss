@@ -3,7 +3,8 @@
   flex-direction: column;
   .sub-header {
     display: flex;
-    background: #f0f6f6;
+      padding: $spacing-xxx-small $spacing-small;
+      background: #f0f6f6;
     flex-direction: row;
     .to-home {
       display: flex;
@@ -25,6 +26,7 @@
       padding: $spacing-x-large;
     }
     display: flex;
+    padding: $spacing-x-large;
     height: 66vh;
     overflow-y: scroll;
     flex-direction: column;
