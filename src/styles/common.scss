@@ -1,3 +1,6 @@
+input[type="text"] { 
+  outline: none;
+}
 .header {
   @include flex-mixin;
     background: $primary-color;
@@ -49,7 +52,11 @@
     color: #4577a2;
     @include flex-mixin(null, flex-end);
     font-size: $font-size-medium;
+    margin: 0 $spacing-x-small;
     border-bottom: 1px solid #4577a2;
+    &:hover{
+      border-bottom: 1px solid transparent !important;
+    }
     @include mq(small) {
       font-size: $font-size-responsive-text-small;
     }
@@ -66,7 +73,6 @@
       padding: $spacing-medium;
     }
     img {
-      padding-right: $spacing-x-small;
       width: 20px;
       height: 15px;
       @include mq(small) {
@@ -122,9 +128,9 @@
     color: $black-color;
   }
 
-  .responsive-image {
-    @include mq(small) {
-      width: 4vw !important;
-      height: 2vh !important;
-    }
-  }
+  // .responsive-image {
+  //   @include mq(small) {
+  //     width: 4vw !important;
+  //     height: 2vh !important;
+  //   }
+  // }

@@ -23,9 +23,10 @@
   background: #42bfdd;
   border: none;
   align-items: center;
-  font-size: $font-size-button;
+  font-size: 0.825rem;
   img {
     margin-left: $spacing-xx-small;
-    width: 2vw;
+    width: 15px;
+    height: 15px;
   }
 }

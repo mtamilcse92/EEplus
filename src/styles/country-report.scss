@@ -41,18 +41,20 @@
       padding-bottom: $spacing-large;
       @include flex-mixin;
       .title-locater {
-      font-size: $font-size-title-small;
-      font-weight: $font-weight-bold;
-      @include mq(small) {
-        justify-content: flex-start;
-        padding-bottom: $spacing-small;
-      }
+        font-size: $font-size-title-small;
+        font-weight: $font-weight-bold;
+        @include mq(small) {
+          justify-content: flex-start;
+          padding-bottom: $spacing-medium;
+          font-size: $font-size-text;
+        }
         @include flex-mixin(center, center, $flexSize: 1);
         img {
-          padding: 0 $spacing-medium;
+          height: 24px;
+          padding: 0 $spacing-small;
         }
         a {
-          color: #BBE6E4 !important;
+          color: #bbe6e4 !important;
         }
       }
       div {
@@ -68,8 +70,12 @@
           }
           height: 32px;
           font-size: $font-size-text-small;
+          color: $white-color;
+          &::placeholder {
+            color: $white-color;
+          }
           padding: $spacing-xxx-small $spacing-small;
-          background: #f0f6f6;
+          background: rgba(190, 190, 190, 0.5);
         }
       }
     }
@@ -99,12 +105,27 @@
         @include flex-mixin(flex-start, $flexSize: 2);
         .state-name {
           @include flex-mixin(flex-start, $flexSize: 2, $flexWrap: wrap);
-          div {
+          .location-list {
             font-size: $font-size-text-small;
+            cursor: pointer;
             @include flex-mixin(flex-start, center);
-            min-width: 8rem;
-            max-width: 8rem;
-            padding: $spacing-medium;
+            @include mq(small) {
+              min-width: 8.7rem;
+              max-width: 8.7rem;
+            }
+            min-width: 15%;
+            max-width: 15%;
+            padding: $spacing-small $spacing-medium;
+            .sub-station-location {
+              @include flex-mixin($flexDirection: column);
+              .sub-location {
+                color: #bbe6e4;
+                font-size: 10px;
+              }
+            }
+            &:hover {
+              color: #bbe6e4;
+            }
             img {
               width: 20px;
               height: 26px;
@@ -114,9 +135,9 @@
         }
       }
     }
-    
+
     .new-report-generator {
-      @include flex-mixin($flexSize:2, $flexDirection: column);
+      @include flex-mixin($flexSize: 2, $flexDirection: column);
       div {
         display: flex;
         align-items: center;
@@ -125,7 +146,7 @@
           padding: 0 $spacing-x-small;
         }
         a {
-          color: #BBE6E4 !important;
+          color: #bbe6e4 !important;
         }
       }
       .title {
