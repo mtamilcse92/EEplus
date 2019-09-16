@@ -1,100 +1,241 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en" class="no-js">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/index.scss" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body class="pick-report">
-  <div class="state-report">
-    <header class="header state-header">
-      <a href="home.html">
-        <img src="../assets/backward-white.svg" alt="antanna" />
-      </a>
-      <div>
-        <div class="label">New Report</div>
-        <div class="title">Select Country</div>
-      </div>
-    </header>
-    <div class="state-list-block">
-      <div class="search-bar">
+  <body class="pick-report">
+    <div class="state-report">
+      <header class="header state-header">
+        <a href="home.html">
+          <img src="../assets/backward-white.svg" alt="antanna" />
+        </a>
+        <div>
+          <div class="label">New Report</div>
+          <div class="title">Select Country</div>
+        </div>
+      </header>
+      <div class="state-list-block">
+        <div class="search-bar">
           <div class="title-locater">
-              <img src="../assets/locater.svg" alt="state" /> Texas, USA
-              <a class="link" href="">change</a>
+            <img src="../assets/locater.svg" alt="state" /> Texas, USA
+            <a class="link" href="">change</a>
+          </div>
+          <div class="search-wrapper">
+            <div class="autocomplete" style="width:300px;">
+              <input
+                id="myInput"
+                class="text-input"
+                type="search"
+                name="myCounty"
+                placeholder="Search County..."
+              />
             </div>
-        <div class="search-wrapper">
-          <input class="text-input" type="search" name="search" placeholder="Search.." />
+          </div>
         </div>
-      </div>
-      <div class="list-with-map">
-        <div class="state-image">
-          <img src="../assets/country-map.svg" alt="state" />
-        </div>
-        <div class="state-name-weapper">
-          <span>
-            <div class="state-name">
-              <div class="location-list">
+        <div class="list-with-map">
+          <div class="state-image">
+            <img src="../assets/country-map.svg" alt="state" />
+          </div>
+          <div class="state-name-weapper">
+            <span>
+              <div class="state-name">
+                <div class="location-list">
                   <a class="flex" href="sub-station.html">
-                      <img src="../assets/locater-fill.svg" alt="state" /> Anderson
-                    </a>
+                    <img src="../assets/locater-fill.svg" alt="state" />
+                    Anderson
+                  </a>
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Alabama
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" />
+                  Connecticut
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Maine
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Missouri
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> New
+                  Mexico
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Oregon
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> New
+                  Hampshire
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Texas
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> New
+                  Hampshire
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> New
+                  Hampshire
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> New
+                  Hampshire
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> Missouri
+                </div>
+                <div class="location-list">
+                  <img src="../assets/locater-fill.svg" alt="state" /> New
+                  Hampshire
+                </div>
               </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Alabama
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Connecticut
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Maine
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Missouri
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> New Mexico
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Oregon
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> New
-                Hampshire
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Texas
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> New
-                Hampshire
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> New
-                Hampshire
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> New
-                Hampshire
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> Missouri
-              </div>
-              <div class="location-list">
-                <img src="../assets/locater-fill.svg" alt="state" /> New
-                Hampshire
-              </div>
-            </div>
-          </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="footer color-white">
-    <p>©2019 EE Plus LLP.,</p>
-  </div>
-  <main class="report-main"></main>
-  <script src="../scripts/index.js"></script>
-</body>
+    <div class="footer color-white">
+      <p>©2019 EE Plus LLP.,</p>
+    </div>
+    <main class="report-main"></main>
 
+    <script>
+      function autocomplete(inp, arr) {
+        var currentFocus;
+        inp.addEventListener("input", function(e) {
+          var a,
+            b,
+            i,
+            val = this.value;
+          closeAllLists();
+          if (!val) {
+            return false;
+          }
+          currentFocus = -1;
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (
+              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+            ) {
+              b = document.createElement("DIV");
+              b.innerHTML =
+                "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener("click", function(e) {
+                inp.value = this.getElementsByTagName("input")[0].value;
+                closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+        });
+
+        inp.addEventListener("keydown", function(e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            currentFocus--;
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+              if (x) x[currentFocus].click();
+            }
+          }
+        });
+        function addActive(x) {
+          if (!x) return false;
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = x.length - 1;
+
+          x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+              x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+        document.addEventListener("click", function(e) {
+          closeAllLists(e.target);
+        });
+      }
+
+      var countries = [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Angola",
+        "Anguilla",
+        "Antigua & Barbuda",
+        "Argentina",
+        "Armenia",
+        "Aruba",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "Bahrain",
+        "Bangladesh",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bermuda",
+        "Bhutan",
+        "Bolivia",
+        "Bosnia & Herzegovina",
+        "Botswana",
+        "Brazil",
+        "British Virgin Islands",
+        "Brunei",
+        "Bulgaria",
+        "Burkina Faso",
+        "Burundi",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Cape Verde",
+        "Cayman Islands",
+        "Central Arfrican Republic",
+        "Chad",
+        "Chile",
+        "China",
+        "Colombia",
+        "Congo",
+        "Cook Islands",
+        "Costa Rica",
+        "Cote D Ivoire",
+        "Croatia"
+      ];
+
+      autocomplete(document.getElementById("myInput"), countries);
+    </script>
+  </body>
 </html>

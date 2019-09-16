@@ -56,7 +56,6 @@
       }
       div {
         flex: 1 auto;
-        font-size: $font-size-title;
       }
       .search-wrapper {
         @include flex-mixin(flex-end, $flexSize: 2);

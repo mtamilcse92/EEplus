@@ -43,6 +43,53 @@ a {
   margin-top: $spacing-xx-large;
 }
 
+// Styles for search suggestion
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  float: right;
+}
+
+input[type="search"] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #4dbfdd;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  width: 370px;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #63829f;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+  color: gray;
+}
+
+.autocomplete-active {
+  background-color: #e9e9e9 !important;
+  color: gray;
+}
+
+// End
 .reset-success-detail {
   font-size: $font-size-text;
   a {
